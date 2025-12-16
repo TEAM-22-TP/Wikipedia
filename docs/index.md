@@ -1,6 +1,6 @@
 # Pán Zemiak wikipédia
 
-Bc. Dominik Zaťovič, Bc. Sebastián Lener, Bc. Matúš Koleják, Bc. Roman Košík, Bc. Lui Vitárius, Bc. Braňo Trstenský, Bc. Matej Hlavaj (nejsom si istý meno sry xD)
+Bc. Dominik Zaťovič, Bc. Sebastián Lener, Bc. Matúš Koleják, Bc. Roman Košík, Bc. Lui Vitárius, Bc. Braňo Trstenský, Bc. Martin Hlaváč
 
 ## Nadpis
 
