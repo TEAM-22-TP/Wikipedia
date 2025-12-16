@@ -1,0 +1,10 @@
+site_name: Pán Zemiak wikipédia
+theme:
+  name: material
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Test: test.md
