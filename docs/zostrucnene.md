@@ -1,8 +1,8 @@
-\## 1. Charakteristika a požiadavky senzorických dát
+## 1. Charakteristika a požiadavky senzorických dát
 
 
 
-\- Senzorické dáta sú generované v reálnom čase stovkami až tisíckami čidiel:
+- Senzorické dáta sú generované v reálnom čase stovkami až tisíckami čidiel:
 
 &nbsp; - teplota,
 
@@ -16,11 +16,11 @@
 
 &nbsp; - spotreba energie.
 
-\- Každé meranie obsahuje časovú pečiatku → vznikajú rozsiahle časové rady (\*time-series\*).
+- Každé meranie obsahuje časovú pečiatku → vznikajú rozsiahle časové rady (*time-series*).
 
-\- Digitálne dvojča potrebuje okamžité dáta pre vizualizáciu a simuláciu → nízka latencia je kritická.
+- Digitálne dvojča potrebuje okamžité dáta pre vizualizáciu a simuláciu → nízka latencia je kritická.
 
-\- Z dlhodobého hľadiska je potrebné uchovávať históriu pre:
+- Z dlhodobého hľadiska je potrebné uchovávať históriu pre:
 
 &nbsp; - analýzy,
 
@@ -30,11 +30,11 @@
 
 &nbsp; - prediktívnu údržbu.
 
-\- Architektúra musí oddeliť:
+- Architektúra musí oddeliť:
 
-&nbsp; - rýchle dáta (\*hot\*),
+&nbsp; - rýchle dáta (*hot*),
 
-&nbsp; - dlhodobú archiváciu (\*cold\*).
+&nbsp; - dlhodobú archiváciu (*cold*).
 
 
 
@@ -42,11 +42,11 @@
 
 
 
-\## 2. Typy senzorov a dopad na výber technológie
+## 2. Typy senzorov a dopad na výber technológie
 
 
 
-\- \*\*Analógové senzory\*\* (0–10 V, 4–20 mA, odpor, termočlánky):
+- **Analógové senzory** (0–10 V, 4–20 mA, odpor, termočlánky):
 
 &nbsp; - vyžadujú PLC s ADC,
 
@@ -54,19 +54,19 @@
 
 &nbsp; - vhodné pre TSDB.
 
-\- \*\*Digitálne senzory\*\* (RS-485/Modbus, I²C, SPI, MQTT):
+- **Digitálne senzory** (RS-485/Modbus, I²C, SPI, MQTT):
 
 &nbsp; - poskytujú vyššiu granularitu a kontext,
 
 &nbsp; - ideálne pre streamingové spracovanie.
 
-\- \*\*IoT senzory cez MQTT/WiFi\*\*:
+- **IoT senzory cez MQTT/WiFi**:
 
 &nbsp; - menšia periodicita,
 
 &nbsp; - vhodné pre broker + TSDB kombináciu.
 
-\- Rozličné rozhrania znamenajú potrebu unifikačnej vrstvy:
+- Rozličné rozhrania znamenajú potrebu unifikačnej vrstvy:
 
 &nbsp; - OPC UA,
 
@@ -78,11 +78,11 @@
 
 
 
-\## 3. Translation Layer – preklad OPC UA dát do jednotného formátu
+## 3. Translation Layer – preklad OPC UA dát do jednotného formátu
 
 
 
-\- Pred odoslaním do middleware je potrebné dáta z OPC UA normalizovať:
+- Pred odoslaním do middleware je potrebné dáta z OPC UA normalizovať:
 
 &nbsp; - vybrať iba relevantné tagy,
 
@@ -92,7 +92,7 @@
 
 &nbsp; - previesť ich do jednotného formátu (najčastejšie JSON).
 
-\- Na tento účel sú vhodné edge gateway riešenia:
+- Na tento účel sú vhodné edge gateway riešenia:
 
 &nbsp; - Hopit Edge IIoT Gateway,
 
@@ -106,7 +106,7 @@
 
 &nbsp; - nízkolatenčné doručovanie do MQTT / stream vrstvy.
 
-\- Tieto gatewaye výrazne zjednodušujú integráciu, keďže digitálne dvojča pracuje už len s:
+- Tieto gatewaye výrazne zjednodušujú integráciu, keďže digitálne dvojča pracuje už len s:
 
 &nbsp; - čistým,
 
@@ -114,7 +114,7 @@
 
 &nbsp; nie so surovou OPC UA hierarchiou.
 
-\- Ako flexibilná alternatíva pre vývoj môže slúžiť:
+- Ako flexibilná alternatíva pre vývoj môže slúžiť:
 
 &nbsp; - Node-RED (s OPC UA pluginmi),
 
@@ -126,11 +126,11 @@
 
 
 
-\## 4. Middleware – čo je vhodné pre jednotlivé scenáre
+## 4. Middleware – čo je vhodné pre jednotlivé scenáre
 
 
 
-\- \*\*MQTT broker\*\*:
+- **MQTT broker**:
 
 &nbsp; - pre jednoduché IoT zariadenia,
 
@@ -140,7 +140,7 @@
 
 &nbsp; - vhodné pre výrobnú linku s menšími dátovými tokmi.
 
-\- \*\*Apache Kafka\*\*:
+- **Apache Kafka**:
 
 &nbsp; - pre veľké objemy dát,
 
@@ -152,13 +152,13 @@
 
 &nbsp; - vhodné pre závody s tisíckami senzorov a komplexnými dátovými tokmi.
 
-\- \*\*OPC UA\*\*:
+- **OPC UA**:
 
 &nbsp; - vhodné tam, kde existuje PLC infraštruktúra,
 
 &nbsp; - potreba jednotného API pre čítanie údajov.
 
-\- \*\*Cloud IoT platformy (Azure / AWS)\*\*:
+- **Cloud IoT platformy (Azure / AWS)**:
 
 &nbsp; - ideálne pri centralizovanom cloudovom digitálnom dvojčati,
 
@@ -170,11 +170,11 @@
 
 
 
-\## 5. Porovnanie databáz – ktorý systém je vhodný pre ktorý use case
+## 5. Porovnanie databáz – ktorý systém je vhodný pre ktorý use case
 
 
 
-\- \*\*Relačné databázy\*\* (PostgreSQL, MySQL):
+- **Relačné databázy** (PostgreSQL, MySQL):
 
 &nbsp; - silné pri metaúdajoch,
 
@@ -184,7 +184,7 @@
 
 &nbsp; - nevhodné pre vysokofrekvenčný ingest.
 
-\- \*\*Time-Series databázy\*\* (InfluxDB, TimescaleDB):
+- **Time-Series databázy** (InfluxDB, TimescaleDB):
 
 &nbsp; - optimalizované na rýchly zápis,
 
@@ -192,7 +192,7 @@
 
 &nbsp; - ideálne pre senzorické dáta.
 
-\- \*\*InfluxDB\*\*:
+- **InfluxDB**:
 
 &nbsp; - extrémne rýchly ingest,
 
@@ -200,7 +200,7 @@
 
 &nbsp; - vhodné pre výrobný závod s veľkým množstvom jednorozmerných meraní.
 
-\- \*\*TimescaleDB\*\*:
+- **TimescaleDB**:
 
 &nbsp; - výhoda SQL,
 
@@ -208,7 +208,7 @@
 
 &nbsp; - vhodné pri kombinácii s výrobou, údržbou a ďalšími tabuľkami.
 
-\- \*\*Apache Cassandra\*\*:
+- **Apache Cassandra**:
 
 &nbsp; - pre masívne objemy (miliardy záznamov mesačne),
 
@@ -216,7 +216,7 @@
 
 &nbsp; - príliš robustné pre menší enterprise závod.
 
-\- \*\*MongoDB\*\*:
+- **MongoDB**:
 
 &nbsp; - vhodné pre heterogénne JSON dáta,
 
@@ -228,13 +228,13 @@
 
 
 
-\## 6. Odporúčaný prístup pre náš use case  
+## 6. Odporúčaný prístup pre náš use case  
 
-\### (digitálne dvojča spracovne zemiakov)
+### (digitálne dvojča spracovne zemiakov)
 
 
 
-\- Senzory budú generovať kontinuálne dáta:
+- Senzory budú generovať kontinuálne dáta:
 
 &nbsp; - teplota,
 
@@ -244,23 +244,23 @@
 
 &nbsp; - hmotnosť  
 
-&nbsp; → primárny dátový typ je \*time-series\*.
+&nbsp; → primárny dátový typ je *time-series*.
 
-\- Počet senzorov je pravdepodobne stredný (desiatky až stovky):
+- Počet senzorov je pravdepodobne stredný (desiatky až stovky):
 
 &nbsp; - Kafka nie je nevyhnutná,
 
 &nbsp; - vhodný je MQTT + prípadne OPC UA.
 
-\- Neexistuje potreba globálnej distribúcie:
+- Neexistuje potreba globálnej distribúcie:
 
 &nbsp; - Cassandra by bola zbytočne komplexná.
 
-\- Potrebná je reálna vizualizácia stavu linky:
+- Potrebná je reálna vizualizácia stavu linky:
 
 &nbsp; - TSDB s rýchlym prístupom k posledným hodnotám je ideálna.
 
-\- Zároveň je potrebné ukladať informácie o:
+- Zároveň je potrebné ukladať informácie o:
 
 &nbsp; - zariadeniach,
 
@@ -270,7 +270,7 @@
 
 &nbsp; → patrí do relačnej DB (PostgreSQL).
 
-\- Najvhodnejšia architektúra:
+- Najvhodnejšia architektúra:
 
 &nbsp; - MQTT / OPC UA → Stream → InfluxDB (senzorické dáta) + PostgreSQL (riadiace / organizačné dáta).
 
@@ -280,31 +280,31 @@
 
 
 
-\## 7. Reálny čas vs. archivácia – čo je pre náš projekt kľúčové
+## 7. Reálny čas vs. archivácia – čo je pre náš projekt kľúčové
 
 
 
-\- Digitálne dvojča musí aktualizovať vizualizáciu v reálnom čase:
+- Digitálne dvojča musí aktualizovať vizualizáciu v reálnom čase:
 
 &nbsp; - TSDB s nízkou latenciou.
 
-\- Dlhodobé dáta slúžia na optimalizáciu výroby:
+- Dlhodobé dáta slúžia na optimalizáciu výroby:
 
 &nbsp; - napr. teplota sušenia vs. kvalita produktu.
 
-\- Retention policies:
+- Retention policies:
 
 &nbsp; - sekundové dáta: 6 mesiacov,
 
 &nbsp; - agregované dáta: napr. 5 rokov.
 
-\- Downsampling:
+- Downsampling:
 
 &nbsp; - hodinové / denné priemery,
 
 &nbsp; - šetrí disk bez straty trendov.
 
-\- Pri prediktívnej údržbe je kvalitná historická databáza nevyhnutná.
+- Pri prediktívnej údržbe je kvalitná historická databáza nevyhnutná.
 
 
 
@@ -312,23 +312,23 @@
 
 
 
-\## 8. Finálne odporúčanie architektúry pre fabriku na spracovanie zemiakov
+## 8. Finálne odporúčanie architektúry pre fabriku na spracovanie zemiakov
 
 
 
-\- \*\*Unifikačná vrstva\*\*:
+- **Unifikačná vrstva**:
 
 &nbsp; - OPC UA (ak sú PLC),
 
 &nbsp; - inak MQTT IoT gateway.
 
-\- \*\*Middleware\*\*:
+- **Middleware**:
 
 &nbsp; - MQTT broker pre zber telemetrie,
 
 &nbsp; - možnosť rozšírenia o Kafka pri raste závodu.
 
-\- \*\*Primárna databáza\*\*:
+- **Primárna databáza**:
 
 &nbsp; - InfluxDB pre všetky senzorické dáta
 
@@ -338,7 +338,7 @@
 
 &nbsp; - downsampling.
 
-\- \*\*Sekundárna databáza\*\*:
+- **Sekundárna databáza**:
 
 &nbsp; - PostgreSQL pre metaúdaje:
 
@@ -350,7 +350,7 @@
 
 &nbsp;   - parametre.
 
-\- \*\*Hot path\*\*:
+- **Hot path**:
 
 &nbsp; - posledné dáta pre digitálne dvojča
 
@@ -358,7 +358,7 @@
 
 &nbsp; - alarmy.
 
-\- \*\*Cold path\*\*:
+- **Cold path**:
 
 &nbsp; - export historických dát do lacného uloženia:
 
@@ -368,7 +368,7 @@
 
 &nbsp; - pre analýzy a ML.
 
-\- Tento model:
+- Tento model:
 
 &nbsp; - minimalizuje náklady,
 
@@ -382,43 +382,43 @@
 
 
 
-\## 9. Možné riešenia HMI / GUI
+## 9. Možné riešenia HMI / GUI
 
 
 
-\### Grafana + Prometheus / Influx / Timescale
+### Grafana + Prometheus / Influx / Timescale
 
 
 
-\- dashboardy,
+- dashboardy,
 
-\- alerty,
+- alerty,
 
-\- monitoring,
+- monitoring,
 
-\- vhodné pre KPI a historické trendy,
+- vhodné pre KPI a historické trendy,
 
-\- možnosť doplniť vlastné panely.
-
-
-
-\### Vlastné riešenie (Python + PyQt5)
+- možnosť doplniť vlastné panely.
 
 
 
-\- nízka latencia pre realtime HMI,
+### Vlastné riešenie (Python + PyQt5)
 
-\- interaktívna schéma,
 
-\- trendy,
 
-\- alarmy,
+- nízka latencia pre realtime HMI,
 
-\- vizuálne upozornenia,
+- interaktívna schéma,
 
-\- flexibilita deploymentu.
+- trendy,
 
-\- Komunikácia:
+- alarmy,
+
+- vizuálne upozornenia,
+
+- flexibilita deploymentu.
+
+- Komunikácia:
 
 &nbsp; - MQTT,
 
@@ -426,13 +426,13 @@
 
 &nbsp; - REST.
 
-\- Možnosť:
+- Možnosť:
 
 &nbsp; - fallback bufferu,
 
 &nbsp; - zmeny správania pri poruche.
 
-\- Integrácie:
+- Integrácie:
 
 &nbsp; - webhooks,
 
@@ -440,15 +440,15 @@
 
 
 
-\### Kombinovaný prístup
+### Kombinovaný prístup
 
 
 
-\- realtime HMI cez vlastné middleware riešenie,
+- realtime HMI cez vlastné middleware riešenie,
 
-\- KPI a alerty cez Grafanu.
+- KPI a alerty cez Grafanu.
 
-\- Pri geospatial dátach:
+- Pri geospatial dátach:
 
 &nbsp; - možnosť použiť KeplerGL
 

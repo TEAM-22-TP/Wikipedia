@@ -1,5 +1,4 @@
-\## Úloha vizualizácie v digitálnom dvojčati
-
+## Úloha vizualizácie v digitálnom dvojčati
 
 
 Digitálne dvojča výrobnej linky je v princípe softvérový model, ktorý v reálnom čase odráža stav fyzickej linky na základe senzorických dát a udalostí. Aby však malo praktický prínos pre operátorov, údržbu a manažment, kľúčová je vrstva vizualizácie a používateľského rozhrania (UI). Tá sprostredkuje komplexné časové rady, stavové prechody, alarmy a simulačné výsledky do podoby, ktorej človek rýchlo rozumie a vie podľa nej konať.
@@ -8,25 +7,25 @@ Digitálne dvojča výrobnej linky je v princípe softvérový model, ktorý v r
 
 V moderných implementáciách sa používa kombinácia:
 
-\- klasických \*\*2D dashboardov\*\* (trendové grafy, tabuľky, KPI),
+- klasických **2D dashboardov** (trendové grafy, tabuľky, KPI),
 
-\- \*\*3D digitálnych modelov\*\* zariadení či celých fabrík,
-
-
-
-často postavených na herných engine-och (Unity, Unreal Engine) alebo špecializovaných 3D vizualizačných platformách. :contentReference\[oaicite:0]{index=0}
+- **3D digitálnych modelov** zariadení či celých fabrík,
 
 
 
-Praktická skúsenosť z priemyslu ukazuje, že digitálne dvojča nie je „iba model“, ale aj \*\*interaktívny kokpit pre rozhodovanie\*\*. Umožňuje:
+často postavených na herných engine-och (Unity, Unreal Engine) alebo špecializovaných 3D vizualizačných platformách. :contentReference[oaicite:0]{index=0}
 
-\- monitorovať aktuálny stav,
 
-\- analyzovať historické trendy,
 
-\- testovať hypotetické scenáre (\*what-if\*),
+Praktická skúsenosť z priemyslu ukazuje, že digitálne dvojča nie je „iba model“, ale aj **interaktívny kokpit pre rozhodovanie**. Umožňuje:
 
-\- trénovať personál v bezpečnom virtuálnom prostredí.
+- monitorovať aktuálny stav,
+
+- analyzovať historické trendy,
+
+- testovať hypotetické scenáre (*what-if*),
+
+- trénovať personál v bezpečnom virtuálnom prostredí.
 
 
 
@@ -38,7 +37,7 @@ Výrobcovia typu Siemens, Rockwell či špecializované firmy na digital twin ri
 
 
 
-\## Typy vizualizácie: od 2D trendov po 3D „virtuálnu fabriku“
+## Typy vizualizácie: od 2D trendov po 3D „virtuálnu fabriku“
 
 
 
@@ -46,29 +45,29 @@ Z hľadiska nášho projektu má zmysel rozlišovať tri hlavné vrstvy vizualiz
 
 
 
-\### 1. 2D HMI/SCADA a dashboardy
+### 1. 2D HMI/SCADA a dashboardy
 
 
 
 Základ tvoria klasické 2D vizualizácie známe zo SCADA systémov a HMI panelov:
 
-\- schematické zobrazenia linky,
+- schematické zobrazenia linky,
 
-\- stavové farby (RUN / STOP / FAULT),
+- stavové farby (RUN / STOP / FAULT),
 
-\- aktuálne hodnoty kľúčových veličín,
+- aktuálne hodnoty kľúčových veličín,
 
-\- alarmový zoznam.
+- alarmový zoznam.
 
 
 
 Pre digitálne dvojča je typické, že tieto obrazovky dopĺňajú:
 
-\- trendové grafy (time-series vizualizácia teplôt, tlakov, rýchlostí konvencií, OEE),
+- trendové grafy (time-series vizualizácia teplôt, tlakov, rýchlostí konvencií, OEE),
 
-\- agregované ukazovatele (napr. priemerná teplota v časti procesu za poslednú hodinu),
+- agregované ukazovatele (napr. priemerná teplota v časti procesu za poslednú hodinu),
 
-\- prepojenie na kvalitatívne a údržbové údaje (napr. preklik z alarmu na historický graf a posledné zásahy údržby).
+- prepojenie na kvalitatívne a údržbové údaje (napr. preklik z alarmu na historický graf a posledné zásahy údržby).
 
 
 
@@ -78,9 +77,9 @@ Mnohé priemyselné platformy dnes ponúkajú práve takýto typ „digital twin
 
 Tieto 2D dashboardy sú vhodné najmä:
 
-\- pre operátorov v reálnej prevádzke, ktorí potrebujú rýchlo vidieť, či proces beží v špecifikáciách,
+- pre operátorov v reálnej prevádzke, ktorí potrebujú rýchlo vidieť, či proces beží v špecifikáciách,
 
-\- pre procesných inžinierov, ktorí analyzujú trendy a korelácie.
+- pre procesných inžinierov, ktorí analyzujú trendy a korelácie.
 
 
 
@@ -88,7 +87,7 @@ Tieto 2D dashboardy sú vhodné najmä:
 
 
 
-\### 2. 3D model výrobnej linky (3D dashboard / „virtuálna fabrika“)
+### 2. 3D model výrobnej linky (3D dashboard / „virtuálna fabrika“)
 
 
 
@@ -98,29 +97,29 @@ Tieto 2D dashboardy sú vhodné najmä:
 
 V praxi sa využívajú najmä herné enginy (Unity, Unreal Engine), ktoré:
 
-\- pracujú s 3D geometrickými modelmi strojov (CAD),
+- pracujú s 3D geometrickými modelmi strojov (CAD),
 
-\- v reálnom čase menia textúry, farby a animácie podľa hodnôt zo senzorov.
+- v reálnom čase menia textúry, farby a animácie podľa hodnôt zo senzorov.
 
 
 
 Každý komponent v 3D scéne (dopravník, miešačka, baliaci stroj) je naviazaný na konkrétne signály z PLC alebo TSDB:
 
-\- farba objektu sa mení podľa stavu (RUN / FAULT),
+- farba objektu sa mení podľa stavu (RUN / FAULT),
 
-\- rýchlosť animácie dopravníka odráža skutočnú rýchlosť pásu,
+- rýchlosť animácie dopravníka odráža skutočnú rýchlosť pásu,
 
-\- nad tankom sa zobrazuje aktuálna teplota a hladina.
+- nad tankom sa zobrazuje aktuálna teplota a hladina.
 
 
 
-V posledných rokoch sa objavujú aj koncepty \*\*3D dashboardov\*\*, kde je 3D model linky priamo hlavným UI a klasické grafy sú do neho vložené ako widgety. Napríklad:
+V posledných rokoch sa objavujú aj koncepty **3D dashboardov**, kde je 3D model linky priamo hlavným UI a klasické grafy sú do neho vložené ako widgety. Napríklad:
 
-\- klik na stroj otvorí 3D panel s trendom vibrácií,
+- klik na stroj otvorí 3D panel s trendom vibrácií,
 
-\- zobrazí históriu porúch,
+- zobrazí históriu porúch,
 
-\- ukáže plán údržby.
+- ukáže plán údržby.
 
 
 
@@ -136,7 +135,7 @@ Pre náš use case (spracovanie zemiakov) by 3D model mohol zobrazovať celú v�
 
 
 
-\### 3. AR/VR rozhrania a tréning
+### 3. AR/VR rozhrania a tréning
 
 
 
@@ -144,35 +143,35 @@ Rozšírenou nadstavbou vizualizácie sú AR/VR rozhrania.
 
 
 
-V prípade \*\*VR (virtuálna realita)\*\* môže digitálne dvojča fungovať ako tréningový simulátor:
+V prípade **VR (virtuálna realita)** môže digitálne dvojča fungovať ako tréningový simulátor:
 
-\- operátor sa v headsete pohybuje po virtuálnej fabrike,
+- operátor sa v headsete pohybuje po virtuálnej fabrike,
 
-\- spúšťa a zastavuje stroje,
+- spúšťa a zastavuje stroje,
 
-\- rieši simulované poruchy,
+- rieši simulované poruchy,
 
-\- učí sa postupy bez rizika poškodenia reálneho zariadenia alebo ohrozenia bezpečnosti.
+- učí sa postupy bez rizika poškodenia reálneho zariadenia alebo ohrozenia bezpečnosti.
 
 
 
 Case studies z výrobného prostredia potvrdzujú, že takéto tréningové twins:
 
-\- skracujú nábeh nových pracovníkov,
+- skracujú nábeh nových pracovníkov,
 
-\- umožňujú precvičiť zriedkavé kritické situácie, ktoré by sa v realite nedali bezpečne simulovať.
+- umožňujú precvičiť zriedkavé kritické situácie, ktoré by sa v realite nedali bezpečne simulovať.
 
 
 
-V \*\*AR (augmented reality)\*\* sa naopak 3D twin „prilepí“ na reálne stroje:
+V **AR (augmented reality)** sa naopak 3D twin „prilepí“ na reálne stroje:
 
-\- technik vidí cez tablet alebo AR okuliare prekryté informácie,
+- technik vidí cez tablet alebo AR okuliare prekryté informácie,
 
-\- aktuálne dáta zo senzorov,
+- aktuálne dáta zo senzorov,
 
-\- históriu porúch,
+- históriu porúch,
 
-\- odporúčané kroky údržby.
+- odporúčané kroky údržby.
 
 
 
@@ -184,7 +183,7 @@ Výskum ukazuje, že takýto kontextovo uvedomelý systém dokáže personalizov
 
 
 
-\## Používateľské role a ich potreby pri vizualizácii
+## Používateľské role a ich potreby pri vizualizácii
 
 
 
@@ -192,17 +191,17 @@ Pri návrhu vizualizačnej vrstvy digitálneho dvojčaťa je dôležité definov
 
 
 
-\### Operátor linky
+### Operátor linky
 
 
 
-\- potrebuje rýchlo vidieť stav zariadení,
+- potrebuje rýchlo vidieť stav zariadení,
 
-\- alarmy,
+- alarmy,
 
-\- základné procesné veličiny,
+- základné procesné veličiny,
 
-\- jednoduché inštrukcie „čo urobiť teraz“.
+- jednoduché inštrukcie „čo urobiť teraz“.
 
 
 
@@ -210,43 +209,43 @@ Kľúčová je prehľadná 2D HMI/SCADA s minimom rušivých prvkov, signálnymi
 
 
 
-\### Údržbár / technik
+### Údržbár / technik
 
 
 
-\- zaujíma ho história porúch,
+- zaujíma ho história porúch,
 
-\- trendy vibrácií,
+- trendy vibrácií,
 
-\- teploty ložísk,
+- teploty ložísk,
 
-\- čas od poslednej údržby,
+- čas od poslednej údržby,
 
-\- odporúčané zásahy.
+- odporúčané zásahy.
 
 
 
 Digitálne dvojča by mu malo umožniť:
 
-\- preklik z alarmu do historického grafu,
+- preklik z alarmu do historického grafu,
 
-\- 3D zobrazenie presnej polohy súčiastky,
+- 3D zobrazenie presnej polohy súčiastky,
 
-\- zobrazenie odporúčaného postupu výmeny.
-
-
-
-\### Procesný inžinier
+- zobrazenie odporúčaného postupu výmeny.
 
 
 
-\- potrebuje detailné časové rady,
+### Procesný inžinier
 
-\- korelácie medzi parametrami (napr. teplota praženia vs. kvalita chipsov),
 
-\- export dát do analytických nástrojov,
 
-\- možnosť spúšťať \*what-if\* simulácie.
+- potrebuje detailné časové rady,
+
+- korelácie medzi parametrami (napr. teplota praženia vs. kvalita chipsov),
+
+- export dát do analytických nástrojov,
+
+- možnosť spúšťať *what-if* simulácie.
 
 
 
@@ -254,11 +253,11 @@ Vhodné sú pokročilé dashboardy (napr. Grafana) a 3D twin s možnosťou simul
 
 
 
-\### Manažment / kvalita
+### Manažment / kvalita
 
 
 
-\- zaujíma ho zhrnutie:
+- zaujíma ho zhrnutie:
 
 &nbsp; - KPI (OEE, výťažnosť, počet porúch, reklamácie),
 
@@ -280,7 +279,7 @@ Literatúra poukazuje na to, že jednotlivé oddelenia (Engineering, Maintenance
 
 
 
-\## Architektúra vizualizačnej vrstvy pre náš projekt
+## Architektúra vizualizačnej vrstvy pre náš projekt
 
 
 
@@ -288,37 +287,37 @@ Nad už navrhnutým zberom dát (OPC UA / MQTT → middleware → InfluxDB / Pos
 
 
 
-\### API / backend pre vizualizáciu
+### API / backend pre vizualizáciu
 
 
 
-\- nad time-series DB (InfluxDB alebo TimescaleDB) beží backend služba,
+- nad time-series DB (InfluxDB alebo TimescaleDB) beží backend služba,
 
-\- poskytuje REST / GraphQL API a WebSockety pre real-time dáta,
+- poskytuje REST / GraphQL API a WebSockety pre real-time dáta,
 
-\- API prekladá interný kanonický model záznamu  
+- API prekladá interný kanonický model záznamu  
 
-&nbsp; (`ts`, `site\_id`, `line\_id`, `asset\_id`, `signal`, `value`)  
+&nbsp; (`ts`, `site_id`, `line_id`, `asset_id`, `signal`, `value`)  
 
 &nbsp; na jednoduchšie endpointy pre UI,
 
-\- súčasťou môže byť:
+- súčasťou môže byť:
 
 &nbsp; - agregácia (moving average, min/max, downsampling),
 
-&nbsp; - prístup k udalostiam (STATE\_CHANGED, RECIPE\_APPLIED, maintenance eventy).
+&nbsp; - prístup k udalostiam (STATE_CHANGED, RECIPE_APPLIED, maintenance eventy).
 
 
 
-\### 2D dashboardy
+### 2D dashboardy
 
 
 
-\- pre operátorov a procesných inžinierov:
+- pre operátorov a procesných inžinierov:
 
 &nbsp; - Grafana alebo custom webová aplikácia (React / Angular),
 
-\- dashboardy zobrazujú:
+- dashboardy zobrazujú:
 
 &nbsp; - live trendové grafy,
 
@@ -330,21 +329,21 @@ Nad už navrhnutým zberom dát (OPC UA / MQTT → middleware → InfluxDB / Pos
 
 
 
-\### 3D digitálne dvojča linky
+### 3D digitálne dvojča linky
 
 
 
-\- 3D model linky (import CAD modelov strojov),
+- 3D model linky (import CAD modelov strojov),
 
-\- vytvorený v Unity alebo Unreal Engine,
+- vytvorený v Unity alebo Unreal Engine,
 
-\- beží ako desktop aplikácia alebo cez WebGL v prehliadači,
+- beží ako desktop aplikácia alebo cez WebGL v prehliadači,
 
-\- runtime aplikácia sa pripája cez WebSocket / MQTT / OPC UA client,
+- runtime aplikácia sa pripája cez WebSocket / MQTT / OPC UA client,
 
-\- mapuje dátové streamy na objekty v scéne,
+- mapuje dátové streamy na objekty v scéne,
 
-\- v 3D view sú dostupné kontextové panely:
+- v 3D view sú dostupné kontextové panely:
 
 &nbsp; - klik na stroj → detailný graf,
 
@@ -354,17 +353,17 @@ Nad už navrhnutým zberom dát (OPC UA / MQTT → middleware → InfluxDB / Pos
 
 
 
-\### AR/VR nadstavba (voliteľná)
+### AR/VR nadstavba (voliteľná)
 
 
 
-\- 3D twin je znovupoužitý pre VR tréning,
+- 3D twin je znovupoužitý pre VR tréning,
 
-\- umožňuje virtuálne commissioning a tréning obsluhy,
+- umožňuje virtuálne commissioning a tréning obsluhy,
 
-\- pre AR sa využívajú existujúce toolkit-y (napr. Unity),
+- pre AR sa využívajú existujúce toolkit-y (napr. Unity),
 
-\- stav stroja je prekrytý pri pohľade cez tablet alebo okuliare.
+- stav stroja je prekrytý pri pohľade cez tablet alebo okuliare.
 
 
 
@@ -376,7 +375,7 @@ Takto navrhnutá vrstva rešpektuje existujúcu architektúru projektu a dopĺň
 
 
 
-\## Prínosy vizualizačnej vrstvy pre náš use case
+## Prínosy vizualizačnej vrstvy pre náš use case
 
 
 
@@ -384,13 +383,13 @@ Implementácia silnej vizualizačnej vrstvy nad digitálnym dvojčaťom prináš
 
 
 
-\- \*\*Rýchlejšia diagnostika problémov\*\* – operátor vidí v 3D a v trendoch, kde sa tvoria úzke hrdlá, časté zastavenia a aké procesné podmienky k nim viedli.
+- **Rýchlejšia diagnostika problémov** – operátor vidí v 3D a v trendoch, kde sa tvoria úzke hrdlá, časté zastavenia a aké procesné podmienky k nim viedli.
 
-\- \*\*Lepší tréning personálu\*\* – nový operátor môže prejsť simulované scenáre porúch v bezpečnom prostredí.
+- **Lepší tréning personálu** – nový operátor môže prejsť simulované scenáre porúch v bezpečnom prostredí.
 
-\- \*\*Podpora kontinuálneho zlepšovania\*\* – procesný inžinier má dlhodobé vizualizácie na identifikáciu opakujúcich sa vzorov.
+- **Podpora kontinuálneho zlepšovania** – procesný inžinier má dlhodobé vizualizácie na identifikáciu opakujúcich sa vzorov.
 
-\- \*\*Zdieľaná „jediná verzia pravdy“\*\* – všetci používatelia pracujú s rovnakými dátami a rovnakým digitálnym modelom, čo znižuje misinterpretácie a zvyšuje dôveru v rozhodovanie.
+- **Zdieľaná „jediná verzia pravdy“** – všetci používatelia pracujú s rovnakými dátami a rovnakým digitálnym modelom, čo znižuje misinterpretácie a zvyšuje dôveru v rozhodovanie.
 
 
 

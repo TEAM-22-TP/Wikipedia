@@ -2,53 +2,53 @@ Pre vizualizáciu digital twin existujú možné riešenia, každé s istými v�
 
 
 
-\### Grafana
+### Grafana
 
 
 
-\- je známa a má bohatý ekosystém,
+- je známa a má bohatý ekosystém,
 
-\- má množstvo pluginov,
+- má množstvo pluginov,
 
-\- podporuje alerty,
+- podporuje alerty,
 
-\- interaguje s Prometheus a Influx.
-
-
-
-Nevýhody:
-
-\- neposkytuje natívny twin renderer,
-
-\- pravdepodobne by bolo potrebné vyvinúť vlastné panely a ovládanie,
-
-\- realtime latencia nemusí byť pod 100 ms.
-
-
-
-\### Node-RED Dashboard
-
-
-
-\- jednoduchý na použitie,
-
-\- rýchlo nasaditeľný.
+- interaguje s Prometheus a Influx.
 
 
 
 Nevýhody:
 
-\- softvér je EOL (end-of-life).
+- neposkytuje natívny twin renderer,
+
+- pravdepodobne by bolo potrebné vyvinúť vlastné panely a ovládanie,
+
+- realtime latencia nemusí byť pod 100 ms.
 
 
 
-\### Node-RED Contrib
+### Node-RED Dashboard
 
 
 
-\- umožňuje no-code a low-code techniky,
+- jednoduchý na použitie,
 
-\- je agnostický na frontend framework  
+- rýchlo nasaditeľný.
+
+
+
+Nevýhody:
+
+- softvér je EOL (end-of-life).
+
+
+
+### Node-RED Contrib
+
+
+
+- umožňuje no-code a low-code techniky,
+
+- je agnostický na frontend framework  
 
 &nbsp; - Vue  
 
@@ -60,29 +60,29 @@ Nevýhody:
 
 Nevýhody:
 
-\- je potrebná práca na vyvinutie frontendu.
+- je potrebná práca na vyvinutie frontendu.
 
 
 
-\### Ignition Perspective
+### Ignition Perspective
 
 
 
-\- poskytuje SCADA-grade HMI.
+- poskytuje SCADA-grade HMI.
 
 
 
 Nevýhody:
 
-\- ide o platený produkt.
+- ide o platený produkt.
 
 
 
-\### ThingsBoard
+### ThingsBoard
 
 
 
-\- podporuje natívny ingest:
+- podporuje natívny ingest:
 
 &nbsp; - MQTT
 
@@ -90,107 +90,107 @@ Nevýhody:
 
 &nbsp; - CoAP
 
-\- alarmy,
+- alarmy,
 
-\- dashboardy,
+- dashboardy,
 
-\- device management.
-
-
-
-Nevýhody:
-
-\- nastavenie je komplexné,
-
-\- softvér je skôr zameraný na IoT než na SCADA/HMI úroveň.
-
-
-
-\### Elastic
-
-
-
-\- dobrá podpora pre dashboardy,
-
-\- alerty.
+- device management.
 
 
 
 Nevýhody:
 
-\- enterprise licencovanie nie je vhodné pre náš projekt,
+- nastavenie je komplexné,
 
-\- neposkytuje 3D renderer.
-
-
-
-\### Metabase
+- softvér je skôr zameraný na IoT než na SCADA/HMI úroveň.
 
 
 
-\- podporuje visual query builder,
-
-\- umožňuje rýchle reporty.
+### Elastic
 
 
 
-Nevýhody:
+- dobrá podpora pre dashboardy,
 
-\- nie je realtime,
-
-\- má obmedzené možnosti analytiky.
-
-
-
-\### Tableau
-
-
-
-\- podporuje vizualizáciu,
-
-\- pokročilé dashboardy.
+- alerty.
 
 
 
 Nevýhody:
 
-\- licencia je nákladná.
+- enterprise licencovanie nie je vhodné pre náš projekt,
+
+- neposkytuje 3D renderer.
 
 
 
-\### KeplerGL
+### Metabase
 
 
 
-\- 3D vizualizácia v prehliadači,
+- podporuje visual query builder,
 
-\- geospatial-oriented.
-
-
-
-Nevýhody:
-
-\- potrebuje integráciu s frontendom,
-
-\- nie je 3D engine pre strojársky digital twin.
-
-
-
-\### Prometheus
-
-
-
-\- dobrá integrácia so softvérom Grafana,
-
-\- určený pre timeseries monitoring.
+- umožňuje rýchle reporty.
 
 
 
 Nevýhody:
 
-\- pull-model,
+- nie je realtime,
 
-\- nie je praktickejší než OPC UA → TSDB.
+- má obmedzené možnosti analytiky.
+
+
+
+### Tableau
+
+
+
+- podporuje vizualizáciu,
+
+- pokročilé dashboardy.
+
+
+
+Nevýhody:
+
+- licencia je nákladná.
+
+
+
+### KeplerGL
+
+
+
+- 3D vizualizácia v prehliadači,
+
+- geospatial-oriented.
+
+
+
+Nevýhody:
+
+- potrebuje integráciu s frontendom,
+
+- nie je 3D engine pre strojársky digital twin.
+
+
+
+### Prometheus
+
+
+
+- dobrá integrácia so softvérom Grafana,
+
+- určený pre timeseries monitoring.
+
+
+
+Nevýhody:
+
+- pull-model,
+
+- nie je praktickejší než OPC UA → TSDB.
 
 
 
@@ -198,41 +198,41 @@ Nevýhody:
 
 
 
-Možnosťou pre 2D dashboard je aj vlastné riešenie cez viacúčelový desktop cockpit pre výrobu s nízkou latenciou pre realtime vizualizáciu stavu linky. Daný frontend/middleware by mohol byť postavený na technológiách \*\*Python\*\* a \*\*PyQt5\*\* a pomocou Python knižníc.
+Možnosťou pre 2D dashboard je aj vlastné riešenie cez viacúčelový desktop cockpit pre výrobu s nízkou latenciou pre realtime vizualizáciu stavu linky. Daný frontend/middleware by mohol byť postavený na technológiách **Python** a **PyQt5** a pomocou Python knižníc.
 
 
 
 Tento cockpit je možné poskladať modulárne a priebežne ho dopĺňať o hotové nástroje. Architektúra Python + Qt5 umožňuje:
 
-\- spúšťať softvér na akomkoľvek operačnom systéme,
+- spúšťať softvér na akomkoľvek operačnom systéme,
 
-\- interagovať s ním pomocou rôznych metód vstupu.
+- interagovať s ním pomocou rôznych metód vstupu.
 
 
 
 Komunikácia by následne mohla prebiehať cez:
 
-\- MQTT klient,
+- MQTT klient,
 
-\- WebSockety,
+- WebSockety,
 
-\- REST rozhranie (FastAPI).
+- REST rozhranie (FastAPI).
 
 
 
 Kľúčovými modulmi možného vlastného GUI sú:
 
-\- živé HMI panely s interaktívnou schémou,
+- živé HMI panely s interaktívnou schémou,
 
-\- možnosti v stavovej lište,
+- možnosti v stavovej lište,
 
-\- vlastné rozloženie schémy (štýlom drag-and-drop),
+- vlastné rozloženie schémy (štýlom drag-and-drop),
 
-\- trendy a grafy s kurzorom a legendou,
+- trendy a grafy s kurzorom a legendou,
 
-\- alarmy a označovanie udalostí,
+- alarmy a označovanie udalostí,
 
-\- prípadné zvukové a vizuálne upozornenia.
+- prípadné zvukové a vizuálne upozornenia.
 
 
 
@@ -242,9 +242,9 @@ Systém by mohol cez webhooks interagovať s inými relevantnými systémami.
 
 Táto cesta otvára možnosť:
 
-\- čiastočne implementovať vlastné GUI,
+- čiastočne implementovať vlastné GUI,
 
-\- spoliehať sa na integrácie s existujúcimi nástrojmi:
+- spoliehať sa na integrácie s existujúcimi nástrojmi:
 
 &nbsp; - Kibana,
 
@@ -254,11 +254,11 @@ Táto cesta otvára možnosť:
 
 Výhodou daného systému je:
 
-\- nízka latencia,
+- nízka latencia,
 
-\- možnosť offline bufferu v prípade zlyhania spojenia,
+- možnosť offline bufferu v prípade zlyhania spojenia,
 
-\- eskalácia pri poruche,
+- eskalácia pri poruche,
 
 
 
