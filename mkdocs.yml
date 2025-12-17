@@ -1,4 +1,4 @@
-site_name: Pán Zemiak wikipédia
+site_name: Obsah wikipédie
 theme:
   name: material
 
@@ -7,4 +7,12 @@ plugins:
 
 nav:
   - Home: index.md
-  - Test: test.md
+  - Existujúce riešenia: existujuce_riesenia.md
+  - Typy dát digitálneho dvojčaťa výrobnej linky: typy_dat.md
+  - Senzorické dáta : senzoricke_data.md
+  - Databázy a spôsoby ukladania dát výrobných liniek : databazy.md
+  - Vizualizácia a používateľské rozhranie digitálneho dvojčaťa výrobnej linky : gui_dd.md
+  - Existujúce riešenia pre používateľské kontrolné rozhranie : riesenia_rozhranie.md
+  - Zhrnutie a odporúčania : zhrnutie.md
+  - Literatúra : literatura.md
+  - Zostručnené : zostrucnene.md
